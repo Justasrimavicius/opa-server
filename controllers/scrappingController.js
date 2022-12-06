@@ -6,7 +6,7 @@ exports.redditScrapping = (req,res,next)=>{
   return;
     // cia bus integracija su reddit scrapping python failu
 
-    const pathToRedditScript = path.join(__dirname,'../python/reddit.py');
+    const pathToRedditScript = path.join(__dirname,'../reddit.py');
 
     const text = req.body.text; // word that will be scrapped
     const freq = req.body.freq;
@@ -22,11 +22,10 @@ exports.redditScrapping = (req,res,next)=>{
 }
 
 exports.twitterScrapping = (req,res,next)=>{
-  res.send(['kafka',12]);
-  return;
+  // res.send(['kafka',12]);
+  // return;
     // cia bus integracija su twitter scrapping python failu(main.py)
-    const pathToRedditScript = path.join(__dirname,'../python/main.py');
-
+    const pathToRedditScript = path.join(__dirname,'../main.py');
     const text = req.body.text; // word that will be scrapped
     const freq = req.body.freq;
     let isResSent = false;
