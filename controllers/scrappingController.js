@@ -20,7 +20,8 @@ exports.redditScrapping = (req,res,next)=>{
 }
 
 exports.twitterScrapping = (req,res,next)=>{
-
+    res.send(['pepa',11]);
+    return;
     // cia bus integracija su twitter scrapping python failu(main.py)
     const pathToRedditScript = path.join(__dirname,'../python/main.py');
 
