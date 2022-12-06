@@ -25,11 +25,13 @@ exports.twitterScrapping = (req,res,next)=>{
   // res.send(['kafka',12]);
   // return;
     // cia bus integracija su twitter scrapping python failu(main.py)
-    const pathToRedditScript = path.join(__dirname,'../main.py');
+    // const pathToRedditScript = path.join(__dirname,'../main.py');
+    const pathToRedditScript = path.join(__dirname,'../test.py');
+
     const text = req.body.text; // word that will be scrapped
     const freq = req.body.freq;
     let isResSent = false;
-    const proccess = spawn('python',[pathToRedditScript,text,freq])
+    const proccess = spawn('python',[pathToRedditScript,'ok'])
     proccess.stdout.on('data',data => {
       if(!isResSent){
         isResSent = true;
