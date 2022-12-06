@@ -24,7 +24,7 @@ app.use(session({ secret: "cats", resave: true, saveUninitialized: true}));
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', 'https://opaa.netlify.app');
     // res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
-
+//
     res.header('Access-Control-Allow-Methods', 'GET, POST, PATCH, PUT, DELETE, OPTIONS');
     res.header('Access-Control-Allow-Headers', 'Origin, Content-Type, X-Auth-Token');
     next();
